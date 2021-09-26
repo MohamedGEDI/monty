@@ -1,5 +1,5 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef __MONTY__H
+#define __MONTY__H
 
 #include <stdio.h>
 #include <unistd.h>
@@ -57,6 +57,7 @@ stack_t *create_node(int n);
 void free_nodes(void);
 void print_stack(stack_t **, unsigned int);
 void add_to_stack(stack_t **, unsigned int);
+void add_to_queue(stack_t **, unsigned int);
 
 void call_fun(op_func, char *, char *, int, int);
 void print_top(stack_t **, unsigned int);
@@ -71,8 +72,16 @@ void div_nodes(stack_t **, unsigned int);
 void mul_nodes(stack_t **, unsigned int);
 void mod_nodes(stack_t **, unsigned int);
 
+/*String operations*/
+void print_char(stack_t **, unsigned int);
+void print_str(stack_t **, unsigned int);
+void rotl(stack_t **, unsigned int);
+
 /*Error hanlding*/
 void err(int error_code, ...);
 void more_err(int error_code, ...);
+void string_err(int error_code, ...);
+void rotr(stack_t **, unsigned int);
 
-#endif
+
+#endif /*__MONTY__H*/
